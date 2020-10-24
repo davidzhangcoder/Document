@@ -1,7 +1,7 @@
 9.Redis Docker命令 和 配置文件  
 20201024
 
-1
+1  
 在/Users/davidzhang/Documents/dockerworkspace/redis/建立redis-6379.conf  
 容器中应该有/data路径  
 -v是使用docker volume  
@@ -42,7 +42,7 @@ redis-6380.conf内容如下(RDB配置文件)
 	save 30 5
 	save 60 10000
 
-3
+3  
 举例AOF配置文件：  
 **注意 - RDB和AOF同时开启，系统默认取AOF的数据 (同时开启 - 即去掉＃注释)**  
 
