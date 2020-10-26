@@ -53,7 +53,28 @@ docker inspect  redis-cluster-6379 | grep IPAddress **(必须要获得docker的�
 redis-cli --cluster create 172.17.0.2:6379, 172.17.0.3:6380, 172.17.0.4:6381, 172.17.0.5:6389, 172.17.0.6:6390, 172.17.0.7:6391 --cluster-replicas 1
 ```
 
-4.集群相关命令
+4.共四步：第四步  
+把相应地址，如：172.17.0.2， 映射到本机  
+```
+sudo ifconfig lo0 alias 172.17.0.2
+sudo ifconfig lo0 alias 172.17.0.3
+sudo ifconfig lo0 alias 172.17.0.4
+sudo ifconfig lo0 alias 172.17.0.5
+sudo ifconfig lo0 alias 172.17.0.6
+sudo ifconfig lo0 alias 172.17.0.7
+```
+
+用完后，可以用以下命令移除  
+```
+sudo ifconfig lo0 -alias 172.17.0.2
+sudo ifconfig lo0 -alias 172.17.0.3
+sudo ifconfig lo0 -alias 172.17.0.4
+sudo ifconfig lo0 -alias 172.17.0.5
+sudo ifconfig lo0 -alias 172.17.0.6
+sudo ifconfig lo0 -alias 172.17.0.7
+```
+
+5.集群相关命令
 ```
 cluster nodes - 查看集群相关信息
 
@@ -64,10 +85,17 @@ cluster countkeysinslot <slot> - 返回槽slot目前包含的键值对数量
 cluster getkeysinslot <slot> <count> - 返回 count 个slot槽中的键
 ```
 
-5.集群相关的概念
+
+6.集群相关的概念
 
 * 不在一个slot下的键值，是不能使用mget,mset等多键操作
 
 * 可以通过{}来定义组的概念，从而使key1中{}内相同内容的键值对放到同一个slot中去
 
 * redis.conf中的参数 cluster-require-full-coverage 是指16384个slot都正常的时候集群才能对外提供服务
+
+
+7.手动命令行建集群
+
+* Mac 搭建 Redis 集群 － https://www.jianshu.com/p/a32542ce4c0b
+
