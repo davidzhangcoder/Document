@@ -1,4 +1,4 @@
-11.Redis集群的配置  
+11.Redis集群的配置 和 集群相关命令  
 20201025
 
 1.共三步：第一步  
@@ -83,6 +83,19 @@ cluster keyslot <key> - 计算键key应该被放置在哪个slot上
 cluster countkeysinslot <slot> - 返回槽slot目前包含的键值对数量
 
 cluster getkeysinslot <slot> <count> - 返回 count 个slot槽中的键
+
+CLIENT LIST            - 获取客户端列表
+
+CLIENT SETNAME   - 设置当前连接点redis的名称
+
+CLIENT GETNAME   - 查看当前连接的名称
+
+CLIENT KILL ip:port   - 杀死指定连接
+
+info clients - 可以查看当前的redis连接数
+
+config get maxclients - 可以查询redis允许的最大连接数
+
 ```
 
 
