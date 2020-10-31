@@ -20,6 +20,9 @@ redis-cli -c -p 6390 --eval testlua.lua userlist , 1
 (2)  
 集群环境中，Lua脚本中所用的Key必须在同一个实例上，可以用{} - 即Hash Tag来解决
 
+(3)  
+集群环境中，Lua脚本中不能使用Multi和Exec
+
 3.集群环境运行Lua的步骤  
 共四步－第一步：通过以下命令得到SHA值
 redis-cli -c -p 6381 script load "$(cat testlua.lua)"
