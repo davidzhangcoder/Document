@@ -17,3 +17,5 @@ npm ls jquery
 4
 查看全局安装的jquery及版本  
 npm ls jquery -g
+
+v1-20201224

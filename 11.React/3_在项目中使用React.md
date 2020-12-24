@@ -58,3 +58,5 @@ npm i redux-thunk -S
 10.引入Axios包
 npm i axios -S
 ```
+
+v1-20201224

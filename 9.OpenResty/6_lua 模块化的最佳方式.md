@@ -46,3 +46,5 @@ local square = require('square')
 local s1 = square:new(2, 3)
 print(s1:get_square())
 ```
+
+v1-20201224

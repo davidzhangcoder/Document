@@ -75,3 +75,5 @@ npm i url-loader@4.1.1 -D
 npm i file-loader@6.2.0 -D
 npm i sass-loader@10.1.0 node-sass@5.0.0 -D
 ```
+
+v1-20201224

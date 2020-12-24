@@ -27,3 +27,5 @@ function display(a, b){
 //apply没有返回值
 // display.apply(obj , [ 111 , 222 ])
 ```
+
+v1-20201224
