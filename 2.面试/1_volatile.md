@@ -31,3 +31,5 @@
 
 System.out.println()中有synchronized
 线程欲进入synchronized时，会执行以下两类操作： 强制写入主存储器（main memory） 当线程欲进入synchronized时，如果该线程的工作存储器（working memory）上有未映像到主存储器的拷贝，则这些内容会强制写入主存储器（store->write），则这些计算结果就会对其它线程可见（visible）。 工作存储器（working memory）的释放 当线程欲进入synchronized时，工作存储器上的工作拷贝会被全部丢弃。之后，欲引用主存储器上的值的线程，必定会从主存储器将值拷贝到工作拷贝（read->load）
+
+v1-20201224

@@ -1,6 +1,7 @@
-14.CountDownLatch, CyclicBarrier 和 Semaphore
+14.CountDownLatch, CyclicBarrier 和 Semaphore  
 20200911
 
+```
 1.CountDownLatch
 	CountDownLatch countDownLatch = new CountDownLatch(6);
 
@@ -19,3 +20,6 @@
 	Semaphore semaphore = new Semaphore(3); //模拟3个停车位
 	semaphore.acquire()
 	semaphore.release()
+```
+
+v1-20201224

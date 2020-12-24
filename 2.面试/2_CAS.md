@@ -24,3 +24,5 @@
 	step4:线程1读取A,执行CAS操作，认为其没有修改过  
 
 6.用AtomicStampedReference解决ABA问题  
+
+v1-20201224
