@@ -1,35 +1,32 @@
 1.新建WebPack项目  
-20201119
+20201119  
 
-1
-进入项目目录, 快速初始化， 会创建包管理文件package.json
-“npm init -y”
+1  
+进入项目目录, 快速初始化， 会创建包管理文件package.json  
+“npm init -y”  
 
-2
-在项目根目录创建src目录和dist目录
+2  
+在项目根目录创建src目录和dist目录  
 
-3
-在src下建index.html
+3  
+在src下建index.html  
 
-4
-在src下建main.js, 这是WebPack打包入口文件
+4  
+在src下建main.js, 这是WebPack打包入口文件 
 
-5
-安装Webpack, “npm i webpack -D”
+5  
+安装Webpack, “npm i webpack -D”  
 
-6
-安装Webpack-cli, “npm i webpack-cli -D”
+6  
+安装Webpack-cli, “npm i webpack-cli -D”  
 
-7
-```
+7  
 webpack.config.js是配置文件
 module.exports＝｛｝
-```
 
 Webpack4和5中，默认的打包入口路径是src\index.js
 
-8
-```
+8  
 安装”npm i webpack-dev-server -D”,来实现自动编译
 在package.json的script中加入"dev": "webpack-dev-server"
 运行 ”npm run dev”
@@ -37,15 +34,14 @@ Webpack4和5中，默认的打包入口路径是src\index.js
 "dev": "webpack-dev-server --port 3000 --hot --host 127.0.0.1"
 
 webpack-dev-server的作用是把生成的main.js放到内存中
-```
 
-9
+9  
 安装“npm i html-webpack-plugin -D”, 来实现把页面生成到内存中去, 并把打包好的js文件注入到页面中去
 
-10
-webpack --display-modules --sort-modules-by size  
-这个命令可以在打包的时候显示所有打包的模块以及他们的体积，并且按照体积从小到大进行排序  
-用于:分析巨大的bundle.js，看看里面都有啥，各个部分占据的体积是多少  
+10  
+webpack --display-modules --sort-modules-by size
+这个命令可以在打包的时候显示所有打包的模块以及他们的体积，并且按照体积从小到大进行排序
+用于:分析巨大的bundle.js，看看里面都有啥，各个部分占据的体积是多少
 
 总结  
 ```
@@ -74,6 +70,31 @@ npm i antd@3.17.0 -S
 npm i url-loader@4.1.1 -D
 npm i file-loader@6.2.0 -D
 npm i sass-loader@10.1.0 node-sass@5.0.0 -D
+
+npm i clean-webpack-plugin@3.0.0 -D  //用于每次打包前清除dist目录
+npm i uglifyjs-webpack-plugin@2.2.0 -D //用于压缩javascript
+npm i extract-text-webpack-plugin@3.0.2 -D //用于抽离css文件 - 只能用于 webpack1 - webpack3
+npm i mini-css-extract-plugin@1.3.4 -D //用于抽离css文件 - 用于 webpack4
+npm i postcss-loader@3.0.0 postcss-preset-env@6.7.0 -D //用css兼容性处理
+npm i autoprefixer@8.0.0 -D
 ```
 
-v1-20201224
+v1-20201224  
+v2-20200124
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
